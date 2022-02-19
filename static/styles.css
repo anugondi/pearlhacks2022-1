@@ -1,6 +1,6 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: black;
+    background-color: rgb(159, 211, 194);
     color: white;
     text-align: center;
   }
@@ -16,15 +16,15 @@ body {
   }
   
   #intro {
-    border-radius: 8px;
+    border-radius: 18px;
     padding: 2%;
-    background-color: white;
-    color: blue;
+    background-color: rgb(228, 217, 182);
+    color: rgb(10, 10, 10);
   }
   
   #intro:hover {
-    background-color:blue;
-    color: white;
+    background-color:rgb(228, 217, 182);
+    color: rgb(255, 255, 255);
   }
   
   a {

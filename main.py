@@ -27,10 +27,10 @@ def charity() -> None:
     global points
     i: bool = True
     print(f"Choose a charity to donate to using your points! Every 100 points = $1 !!")
-    print(f"1. Ocean Conservancy: \n -Work to create and promote a healthy ocean. \n -Raise awareness about the importance of maintaining a healthy ocean.")
-    print(f"2. ICF Food Pantry: \n -Based in Carrboro, North Carolina \n -Provides fresh produce and shelf-stable items to those in need \n -Provides approximately 1300 bags of groceries every month \n -Collaborates with Weaver Street Market and Farmer Foodshare")
-    print(f"3. Redress Raleigh \n -Based in Raleigh, North Carolina \n -Lead seminars about sustainable fashion. \n - Hold textile drives \n -Collaborate with other local nonprofits that focus on sustainability in the fashion industry")
-    charity_choice: int = input("Which charity would you like to donate to (1/2/3): ")
+    print(f"Ocean Conservancy: \n -Work to create and promote a healthy ocean. \n -Raise awareness about the importance of maintaining a healthy ocean.")
+    print(f"ICF Food Pantry: \n -Based in Carrboro, North Carolina \n -Provides fresh produce and shelf-stable items to those in need \n -Provides approximately 1300 bags of groceries every month \n -Collaborates with Weaver Street Market and Farmer Foodshare")
+    print(f"Redress Raleigh \n -Based in Raleigh, North Carolina \n -Lead seminars about sustainable fashion. \n - Hold textile drives \n -Collaborate with other local nonprofits that focus on sustainability in the fashion industry")
+    charity_choice: int = input("Which charity would you like to donate to (Ocean Conservancy, ICF Food Pantry, Redress Raleigh): ")
     donation_amount: int = int(input("How many dollars would you like to donate? "))
     new_points: int = points - donation_amount * 100
     while i:
@@ -38,7 +38,7 @@ def charity() -> None:
             print("Sorry, you don't have enough points!")
             new_points = points
         else:
-            print(f"Thank you for your donation! \n You have {new_points} left.")
+            print(f"Thank you for your donation to {charity_choice}! \n You have {new_points} left.")
             extra: str = input("Do you want to donate to another organization (Yes/No)? ")
             if extra == "No":
                 i = False 
