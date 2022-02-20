@@ -7,24 +7,39 @@ body {
   
   .main-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 100px 1fr 50px;
   }
-  
+
+.quiz-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.quiz-header {
+  grid-row: 2/3;
+}
+
   #index-header {
-    grid-row: 3/4;
+    grid-row: 2/3;
+    grid-column: 2/3;
   }
   
+#blurb {
+  border: 1px solid white;
+  padding: 3%;
+}
+
   #intro {
-    border-radius: 18px;
+    border-radius: 14px;
     padding: 2%;
     background-color: rgb(228, 217, 182);
     color: rgb(10, 10, 10);
   }
   
   #intro:hover {
-    background-color:rgb(228, 217, 182);
-    color: rgb(255, 255, 255);
+    background-color: black;
+    color: rgb(228, 217, 182);
   }
   
   a {

@@ -16,7 +16,6 @@ def quiz():
         clothes_item: str = request.form['clothes']
 
         main(item_type, plastic_type, food_type, clothes_item)
-        result: str="" #final result, fix later
 
         render_template("result.html", result=result)
         return item_type
