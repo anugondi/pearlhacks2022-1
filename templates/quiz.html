@@ -2,33 +2,49 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>quiz page but we can change this</title>
+        <title>finally worked!!!</title>
         <link rel='stylesheet' href='/static/styles.css'/>
     </head>
-    <body class="main-grid">
+    <body class="quiz-grid">
         <header>
         <form method="post">
-            <label for="fname">First name:</label>
-            <br />
-            <input type="text" name="fname">
-            <br />
-            <label for="lname">Last name:</label>
-            <br />
-            <input type="text" name="lname">
-            <br />
-            <br>
-            <label for="animal">What kind of item do you have?</label>
-            <select class="one" name="animal">
-                <option value="lion"></option>
-                <option value="snake">Clothes</option>
-                <option value="eagle">Food</option>
-                <option value="badger">Electronics</option>
-                <option value="badger">Plastic</option>
-                <option value="badger">Old furniture</option>
+            <label class="question" for="item_type">What kind of item do you have?</label>
+            <select name="item">
+                <option></option>
+                <option value="Clothes">Clothes</option>
+                <option value="Food">Food</option>
+                <option value="Electroincs">Electronics</option>
+                <option value="Plastic">Plastic</option>
             </select>
-            <br />
             <br>
-            <input class ="one" type="submit" value="Submit">
+            <br>
+            <!-- <input class ="one" type="submit" value="Submit"> -->
+            <label class="question" for="plastic">Select the type of plastic:</label>
+            <select name="type of plastic">
+                <option></option>
+                <option value="Hard Plastic">Hard Plastic</option>
+                <option value="Single-Use">Single-Use Plastic</option>
+            </select>
+            <br>
+            <br>
+            <label class="question" for="food">Select the type of food waste:</label>
+            <select name="food">
+                <option></option>
+                <option value="Foods that have gone bad">Rotten food</option>
+                <option value="Ingredients I Don't Know What to Do With">Unused ingredients</option>
+            </select>
+            <br>
+            <br>
+            <label class="question" for="clothes">Select the type of clothes:</label>
+            <select name="clothes">
+                <option></option>
+                <option value="Shirts/Tops">Shirts/Tops</option>
+                <option value="Pants/Bottoms">Pants/Bottoms</option>
+                <option value="Undergarmets and Socks">Undergarments/Socks</option>
+            </select>
+            <br>
+            <br>
+            
         </form>
     </header>
     </body>
