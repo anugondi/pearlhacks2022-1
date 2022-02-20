@@ -2,7 +2,7 @@
 
 points: int = 0
 
-def main(item_type, plastic_type, food_type, clothes_item) -> None:
+def main(item_type, plastic_type, food_type, clothes_item) -> str:
     """Users select which item they want to repurpose or recycle."""
     global points
     # item_type: str = input(f"What kind of item do you have? \nType one: Plastic/Food/Clothes/Electronics: ")
