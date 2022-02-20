@@ -2,18 +2,17 @@
 
 points: int = 0
 
-
-def main() -> None:
+def main(item_type, plastic_type, food_type, clothes_item) -> None:
     """Users select which item they want to repurpose or recycle."""
     global points
-    item_type: str = input(f"What kind of item do you have? \nType one: Plastic/Food/Clothes/Electronics: ")
-    print(item_type)
+    # item_type: str = input(f"What kind of item do you have? \nType one: Plastic/Food/Clothes/Electronics: ")
+    # print(item_type)
     if item_type == "Plastic":
-        plastic()
+        plastic(plastic_type)
     elif item_type == "Food":
-        food()
+        food(food_type)
     elif item_type == "Clothes":
-        clothes()
+        clothes(clothes_item)
     elif item_type == "Electronics":
         electronics()
     repeat: str = input("Do you have any more items (Yes/No)? ")
@@ -38,16 +37,16 @@ def charity() -> None:
             print("Sorry, you don't have enough points!")
             new_points = points
         else:
-            print(f"Thank you for your donation to {charity_choice}! \n You have {new_points} left.")
+            print(f"Thank you for your donation to {charity_choice}! \n You have {new_points} points left.")
             extra: str = input("Do you want to donate to another organization (Yes/No)? ")
             if extra == "No":
                 i = False 
         
 
-def plastic() -> None:
+def plastic(plastic_type) -> None:
     """Calls one of two functions based on type of plastic."""
-    plastic_type: str = input(f"What kind of plastic are you recycling/repurposing? \nSelect: Single-Use (i.e plastic bags, waterbottles) or Hard Plastic (i.e beauty product containers): ")
-    print(plastic_type)
+    # plastic_type: str = input(f"What kind of plastic are you recycling/repurposing? \nSelect: Single-Use (i.e plastic bags, waterbottles) or Hard Plastic (i.e beauty product containers): ")
+    # print(plastic_type)
     if plastic_type == "Single-Use":
         single_use_plastic()
     elif plastic_type == "Hard Plastic":

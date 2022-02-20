@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from home import main, charity, plastic, single_use_plastic, hard_plastic, food, clothes, electronics
+from home import main
 
 app: Flask = Flask(__name__)
 
@@ -14,13 +14,13 @@ def quiz():
         plastic_type: str = request.form['type of plastic']
         food_type: str = request.form['food']
         clothes_item: str = request.form['clothes']
+
+        main(item_type, plastic_type, food_type, clothes_item)
         result: str="" #final result, fix later
-    
 
-
-
-        return render_template("result.html", result=result)
+        render_template("result.html", result=result)
+        return item_type
     return render_template("quiz.html")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=8000)
