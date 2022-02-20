@@ -2,17 +2,17 @@
 
 points: int = 0
 
-def main(item_type, plastic_type, food_type, clothes_item) -> None:
+def main() -> str:
     """Users select which item they want to repurpose or recycle."""
     global points
-    # item_type: str = input(f"What kind of item do you have? \nType one: Plastic/Food/Clothes/Electronics: ")
-    # print(item_type)
+    item_type: str = input(f"What kind of item do you have? \nType one: Plastic/Food/Clothes/Electronics: ")
+    print(item_type)
     if item_type == "Plastic":
-        plastic(plastic_type)
+        plastic()
     elif item_type == "Food":
-        food(food_type)
+        food()
     elif item_type == "Clothes":
-        clothes(clothes_item)
+        clothes()
     elif item_type == "Electronics":
         electronics()
     repeat: str = input("Do you have any more items (Yes/No)? ")
@@ -43,10 +43,10 @@ def charity() -> None:
                 i = False 
         
 
-def plastic(plastic_type) -> None:
+def plastic() -> None:
     """Calls one of two functions based on type of plastic."""
-    # plastic_type: str = input(f"What kind of plastic are you recycling/repurposing? \nSelect: Single-Use (i.e plastic bags, waterbottles) or Hard Plastic (i.e beauty product containers): ")
-    # print(plastic_type)
+    plastic_type: str = input(f"What kind of plastic are you recycling/repurposing? \nSelect: Single-Use (i.e plastic bags, waterbottles) or Hard Plastic (i.e beauty product containers): ")
+    print(plastic_type)
     if plastic_type == "Single-Use":
         single_use_plastic()
     elif plastic_type == "Hard Plastic":
@@ -57,7 +57,6 @@ def single_use_plastic() -> None:
     global points
     """How to repurpose or recycle single_use_plastic."""
     specific_plastic: str = input("What kind of single use plastic item are you repurposing or recycling? \nSelect one: Plastic bag, Water bottle, Utensils: ")
-    # specifc plastic will be a dropdown
     if specific_plastic == "Plastic bag":
         print(f"Recycling Options: \n1. Drop off plastic bags to your local Walmart! \nRepurposing Options: \n2. Reuse as a trash bag. \n3. Use for packaging when padding fragile items. \n4. Use to pack objects when travelling.")
         x: int = input("Which option did you do? Enter 1/2/3/4: ")
